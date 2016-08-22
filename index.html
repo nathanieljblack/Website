@@ -346,12 +346,18 @@
                             <p>The purpose of the unsupervised learning algorithm is to make the classification process scalable once the price comparison tool is expanded to include items beyond the iPhone. In such a case, it would be impractical to conduct supervised learning on each individual item. Unsupervised learning can categorize postings without having to manually train the model.
                             </p>
 
+                            <p>
+                                The web application is a live website where the user can search for a given iPhone in a given location over a specified timeframe. The chosen stack for building the website is commonly known as the “MEAN” stack (MongoDB, Express.io, Angular.js, Node.js). This is a full- stack where the server, database, and model-view-controller (MVC) framework can be setup such that the website can work interactively with MongoDB. Whenever a user queries the website, the “model” component of the MVC framework will send a request to acquire the needed data from the MongoDB database stored on Amazon EC2. The “controller” component of the framework will perform any further calculations and data preparations prior to passing the “view” component of the framework. The user will then be able to see the data in the form of a rendered D3.js visualization. There is actually slightly more complexity in our MVC framework as we incorporated Angular.js for our website where we must define both client-side and server-side framework.
+                            </p>
+
                             <div class="text-center" alt="">
                                 <img src="img/portfolio/priceright_arc.png" class="img-responsive" alt="">
                             </div>
 
-                            <p>The screenshot below outlines the final product.
+                            <p>While the website is no longer live, the screenshot depicts our final product. The website allows a user to select an iPhone model, location, and date range, the website will then provide relevant results and price history in an easily digestible format.
                             </p>
+
+                            <br>
 
                             <div class="text-center" alt="">
                                 <img src="img/portfolio/priceright.png" class="img-responsive" alt="">
@@ -363,7 +369,7 @@
                                     </strong>
                                 </li>
                                 <li>Tools:
-                                    <strong>Python, Scrapy, Sklearn, AWS S3, MongoDB, Gensim, D3.js
+                                    <strong>Python, Scrapy, Sklearn, AWS S3, MongoDB, Gensim, D3.js, MEAN Stack
                                     </strong>
                                 </li>
                             </ul>
