@@ -293,7 +293,7 @@
                             </p>
 
                             <p>
-                                The web application is a live website where the user can search for a given iPhone in a given location over a specified timeframe. The chosen stack for building the website is commonly known as the “MEAN” stack (MongoDB, Express.io, Angular.js, Node.js). This is a full- stack where the server, database, and model-view-controller (MVC) framework can be setup such that the website can work interactively with MongoDB. Whenever a user queries the website, the “model” component of the MVC framework will send a request to acquire the needed data from the MongoDB database stored on Amazon EC2. The “controller” component of the framework will perform any further calculations and data preparations prior to passing the “view” component of the framework. The user will then be able to see the data in the form of a rendered D3.js visualization. There is actually slightly more complexity in our MVC framework as we incorporated Angular.js for our website where we must define both client-side and server-side framework.
+                                The web application is a live website where the user can search for a given iPhone in a given location over a specified timeframe. The chosen stack for building the website is commonly known as the “MEAN” stack (MongoDB, Express.io, Angular.js, Node.js). This is a full- stack where the server, database, and model-view-controller (MVC) framework can be setup such that the website can work interactively with MongoDB. Whenever a user queries the website, the “model” component of the MVC framework will send a request to acquire the needed data from the MongoDB database stored on Amazon EC2. The “controller” component of the framework will perform any further calculations and data preparations prior to passing the “view” component of the framework. The user will then be able to see the data in the form of a rendered D3.js visualization.
                             </p>
 
                             <div class="text-center" alt="">
@@ -315,7 +315,7 @@
                                     </strong>
                                 </li>
                                 <li>Tools:
-                                    <strong>Python, Scrapy, Sklearn, AWS S3, MongoDB, Gensim, D3.js, MEAN Stack
+                                    <strong>Python, Scrapy, Sklearn, AWS S3, Gensim, D3.js, MEAN Stack
                                     </strong>
                                 </li>
                             </ul>
@@ -342,6 +342,11 @@
                             <h3>Machine Learning for Forestry</h3>
                             <h4><i>with Vineet Gangwar, Jared Maslin, & Malini Mittal</i></h4>
                             <hr class="star-primary">
+
+                            <div class="text-center" alt="">
+                                <img src="img/portfolio/forestcover.png" class="img-responsive" alt="">
+                            </div>
+
                             <h4>Problem</h4>
                             <p>In this Kaggle competition you are asked to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data). The actual forest cover type for a given 30 x 30 meter cell was determined from US Forest Service (USFS) Region 2 Resource Information System data. Independent variables were then derived from data obtained from the US Geological Survey and USFS. The data is in raw form (not scaled) and contains binary columns of data for qualitative independent variables such as wilderness areas and soil type.</p>
 
@@ -384,12 +389,41 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project</h2>
-                            <h3>Project Description</h3>
+                            <h2>Field Experiment</h2>
+                            <h3>Discrimination in Competitive Housing Markets</h3>
                             <hr class="star-primary">
                             <h4>Problem</h4>
                             <br>
+                            <p>
+                                This experiment studies discrimination in the U.S. rental housing market by analyzing response rates to Craigslist housing inquiries. The study utilizes a 2x2 factorial design to measure the prevalence of racial and/or social status discrimination. Racial discrimination was tested by replying to Craigslist advertisements with either a “white-sounding” name (Greg Baker) or a “black-sounding” name (Jamal Jones) while social status discrimination was tested by varying the e-mail respondent’s job. The experiment was conducted on 800 Craigslist postings across five U.S. markets: Chicago, Cleveland, New York, Raleigh, and San Jose.</p>
+
                             <h4>Solution</h4>
+
+                            <p>The experiment was a 2x2 factorial audit design, measuring the discriminatory effect of race and social status on the subjects. The subjects were landlords advertising their rental housing on www.craigslist.org. The treatment was administered by sending email responses to the housing listing. Our main treatment of interest, the race of the respondent, was operationalized by the use of one black-sounding name, Jamal Jones, and one white-sounding name, Greg Baker. Our secondary treatment, social status, was administered via a profession mentioned in the email sent to the landlords.  We used a binary outcome variable set to 1 in the event of a response to our automated inquiry and 0 for no response.
+                            </p>
+
+                            <p>
+                                In order to determine the appropriate sample size for our experiment, we implemented a power calculation based on data obtained in our pilot study. We set the average treatment effect (ATE) at a minimum of 5% in our actual experiment. Using the observed response rate in our control group (60% for white-sounding name), we used the formula for a Z-test for difference in proportions to determine that 749 subjects were needed to detect our desired minimum ATE.
+                            </p>
+
+                            <p>
+                                Four email addresses were created for each city. Each email responded to 40 listings. The email addresses were of the following general format, where “XXXX’ were some numerical characters to distinguish between them. In addition, each account name was set to either “Greg Baker” or “Jamal Jones”, depending on the race assignment of the account. This method reinforced our treatment as landlords presumably saw the respondents name next to the subject line in their inbox. The four emails we used were:
+                            </p>
+                            <ul>
+                                <li>
+                                    jamal.jonesXXXX@gmail.com (black; high status)
+                                </li>
+                                <li>
+                                    jamal.jonesXXXX@gmail.com (black; low status)
+                                 </li>
+                                 <li>
+                                    greg.bakerXXXX@gmail.com (white; high status)
+                                </li>
+                                <li>
+                                    greg.bakerXXXX@gmail.com (white; low status)
+                                </li>
+                            </ul>
+
 
                             <ul class="list-inline item-details">
                                 <li>Link:
