@@ -234,21 +234,15 @@
                              Soteria uses combination of the internet of things (IoT) and machine learning to detect distracted driving. The IoT component consists of a custom Raspberry Pi unit connected to the cloud while the machine learning component is a convolutional neural network (CNN).
                             </p>
 
-                            <p>
-                            The neural network was trained on over 20,000 images from 10 different classes. Classes included:
-                            <ul>
-                                <li>0: safe driving</li>
-                                <li>1: texting - right</li>
-                                <li>2: talking on the phone - right</li>
-                                <li>3: texting - left</li>
-                                <li>4: talking on the phone - left</li>
-                                <li>5: operating the radio</li>
-                                <li>6: drinking</li>
-                                <li>7: reaching behind</li>
-                                <li>8: hair and makeup</li>
-                                <li>9: talking to passenger</li>
-                            </ul>
+                            <div class="text-center" alt="">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/O97l99HHRi4?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            </div>
 
+                            <p>
+                            The neural network was trained on over 20,000 images from 10 different classes. Classes included safe driving, texting, talking on the phone, operating the radio, drinking, reching behind, talking, and hair/makeup.
+                            </p>
+
+                            <p>
                             The network was based on the popular <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/">VGG-16</a>framework, a 16-layer neural network created by the Visual Geometry Group out of the University of Oxford. With VGG-16 pre-trained weights as a starting point, the model was further trained to learn the idiosyncrasies of our data. Our model also includes global average pooling (GAP) just before the final output layer at the end which allows the model to recognize localization (e.g. identify hands). The benefit of GAP can be seen below in the class activation maps. Note how the model recognizes the hands in the first row of images (safe driving) while it regonizes the phone in the second row of images (texting).
                             </p>
 
@@ -275,10 +269,6 @@
                                 </div>
                             </div>
 
-
-                            <div class="text-center" alt="">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/O97l99HHRi4?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                            </div>
                             <br>
                             <p>As shown in the video above, Soteria provides users with real-time feedback as it uses deep learning to detect distracted driving. The project architecture below shows how we collect, store, and communicate the data with the user. Check out <a href="http://soteriasafedriving.com">http://soteriasafedriving.com</a> for more detail!</p>
 
