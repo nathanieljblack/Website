@@ -245,7 +245,7 @@
                             </p>
 
                             <p>
-                            The network was based on the popular <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/">VGG-16</a>framework, a 16-layer neural network created by the Visual Geometry Group out of the University of Oxford. With VGG-16 pre-trained weights as a starting point, the model was further trained to learn the idiosyncrasies of our data.
+                            The network was based on the popular <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/">VGG-16</a> framework, a 16-layer neural network created by the Visual Geometry Group out of the University of Oxford. With VGG-16 pre-trained weights as a starting point, the model was further trained to learn the idiosyncrasies of our data.
                             </p>
 
                             <p>Our model also includes global average pooling (GAP) just before the final output layer at the end which allows the model to recognize localization (e.g. identify hands). The benefit of GAP can be seen below in the class activation maps. Note how the model recognizes the hands in the first row of images (safe driving) while it regonizes the phone in the second row of images (texting).
@@ -322,11 +322,11 @@
                             </div>
 
                             <h4>Problem</h4>
-                            <p>While Craigslist is wonderful for its low cost and ease of use, it is very difficult and time-consuming to use Craigslist as a price comparison tool. This project attempts to filter the massive corpus of Craigslist data into a human-readable summary of prices across various markets over time.</p>
+                            <p>While Craigslist is wonderful for its low cost and ease of use, it is very difficult and time-consuming to use Craigslist as a price comparison tool. This project attempts to filter the massive corpus of Craigslist data into a human-readable summary of prices across various markets over time. We focus on Apple's iPhone in this project but it can easily be extended into other markets as well.</p>
 
                             <br>
                             <h4>Solution</h4>
-                            <p>We use a Python script to scrape the data off of the Craigslist website. The Python script is executed on a daily basis using Cronjob. Raw data from the data acquisition process is stored in Amazon S3’s key-value store. NLP techniques are used to match potentially different descriptions to the same item as well as to weed out unrelated items. Cleaned data is again stored in Amazon S3's key-value store.</p>
+                            <p>We use a Python script to scrape the iPhone data off of the Craigslist website. The Python script is executed on a daily basis using Cronjob. Raw data from the data acquisition process is stored in Amazon S3’s key-value store. Natural language processing (NLP) techniques are used to match potentially different descriptions to the same item as well as to weed out unrelated items. Cleaned data is again stored in Amazon S3's key-value store.</p>
 
                             <p>The supervised learning classification was a two-step process: a machine learning classifier and regular expressions. The initial classification was binary (iPhone/not iPhone) using the Naive Bayes algorithm. Other supervised learning techniques were considered such as Logistic Regression and Support Vector Machines, but the Naive Bayes algorithm was chosen for its simplicity and transparency. The second step in the process is a regular expression waterfall where iPhones are classified based on various text patterns.
                             </p>
