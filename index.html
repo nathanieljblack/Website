@@ -238,12 +238,17 @@
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/O97l99HHRi4?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
                             </div>
 
+                            <br>
+
                             <p>
                             The neural network was trained on over 20,000 images from 10 different classes. Classes included safe driving, texting, talking on the phone, operating the radio, drinking, reching behind, talking, and hair/makeup.
                             </p>
 
                             <p>
-                            The network was based on the popular <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/">VGG-16</a>framework, a 16-layer neural network created by the Visual Geometry Group out of the University of Oxford. With VGG-16 pre-trained weights as a starting point, the model was further trained to learn the idiosyncrasies of our data. Our model also includes global average pooling (GAP) just before the final output layer at the end which allows the model to recognize localization (e.g. identify hands). The benefit of GAP can be seen below in the class activation maps. Note how the model recognizes the hands in the first row of images (safe driving) while it regonizes the phone in the second row of images (texting).
+                            The network was based on the popular <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/">VGG-16</a>framework, a 16-layer neural network created by the Visual Geometry Group out of the University of Oxford. With VGG-16 pre-trained weights as a starting point, the model was further trained to learn the idiosyncrasies of our data.
+                            </p>
+
+                            <p>Our model also includes global average pooling (GAP) just before the final output layer at the end which allows the model to recognize localization (e.g. identify hands). The benefit of GAP can be seen below in the class activation maps. Note how the model recognizes the hands in the first row of images (safe driving) while it regonizes the phone in the second row of images (texting).
                             </p>
 
                             <div class="row">
@@ -270,17 +275,13 @@
                             </div>
 
                             <br>
-                            <p>As shown in the video above, Soteria provides users with real-time feedback as it uses deep learning to detect distracted driving. The project architecture below shows how we collect, store, and communicate the data with the user. Check out <a href="http://soteriasafedriving.com">http://soteriasafedriving.com</a> for more detail!</p>
+                            <p>As shown in the video above, Soteria provides users with real-time feedback as it uses deep learning to detect distracted driving. The project architecture below shows how we collect data with a custom Raspberry Pi device, store the data in a NoSQL database, and communicate the data with the user via MQTT message passing. Check out <a href="http://soteriasafedriving.com">http://soteriasafedriving.com</a> for more detail.</p>
 
                             <div class="text-center" alt="">
                                 <img src="img/portfolio/soteria_architecture.png" class="img-responsive center-block" alt="">
                             </div>
 
                             <br>
-                            <p>Soteria utilizes a technique known as transfer learning where a pre-trained network is used for initialization weights and then further trained to learn the idiosyncrasies of our data. The well-known VGG-16 pre-trained net was used as our starting point. We perform global average pooling (GAP) which allows the model to recognize localization of objects. The class activation maps below depict areas that the model recognizes as important...
-                            </p>
-
-
 
                             <ul class="list-inline item-details">
                                 <li>Link:
