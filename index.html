@@ -396,9 +396,14 @@
 
                             <br>
                             <h4>Solution</h4>
-                            <p>Features included Elevation, Aspect, Slope, distance to nearest surface water features, distance to nearest wildfire ignition points, Hillshade, Wilderness_Area, and Soil_Type. The training data held an even split across all 7 cover types, whereas the test data was heavily skewed toward types 1 and 2. Boxplots showed a clear divergence in elevation.
+                            <p>Features included elevation, aspect, slope, distance to nearest surface water features, distance to nearest wildfire ignition points, hillshade, wilderness area, and soil type. The training data held an even split across all 7 cover types, whereas the test data was heavily skewed toward types 1 and 2. For this reason, we weighted observations (i.e. types 1 and 2 were more important) to account for the skewed test data.
+                            </p>
 
+                            <p>
+                            Feature engineering was a key aspect of this project. Based on data visualization, forestry research, and intuition, we engineered several new features including distance to fire versus water, Euclidean distance to water, total energy based on hillshade, as well as several other comparative measures. The engineered features helped amplify variation between classes
+                            </p>
 
+                            <p>We tested several classifiers including K-Nearest Neighbors, Support Vector Machines, and Logistic Regression, but ultimately used a variation of Random Forests known as Extra Trees as our final classifier. The classifier resulted in an accuracy of 84.03% and a Kaggle rank of 163.
                             </p>
 
 
