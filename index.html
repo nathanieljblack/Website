@@ -79,7 +79,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>I am a data scientist and I love the art of problem solving. I am proficient in R, Python, and SQL as well as other big data technologies such as Apache Hadoop and Apache Spark. My interests include machine learning, functional programming, data visualization, and the internet of things.</p>
+                    <p>I am a data scientist and I love the art of problem solving. I am proficient in a variety of technologies including R, Python, SQL, and several other "big data" technologies. My interests include machine learning, functional programming, data visualization, and the internet of things.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>I am a credentialed actuary with a background in mathematics. I recently graduated from the University of California at Berkeley <a style="color:black" href="https://datascience.berkeley.edu/">Master of Information and Data Science</a> program. If you are interested in collaborating, please <a href="mailto:nathaniel.j.black@gmail.com?Subject=Hi%20Nate" style="color:black">contact me</a>. Or you can find me on <a href="https://www.linkedin.com/in/nathanieljblack" style="color:black">LinkedIn</a> or <a style="color:black" href="https://github.com/nathanieljblack">GitHub</a>.</p>
@@ -450,21 +450,36 @@
                             <p>The experiment was a 2x2 factorial audit design, measuring the discriminatory effect of race and social status on the subjects. The subjects were landlords advertising their rental housing on www.craigslist.org. The treatment was administered by sending email responses to the housing listing. Our main treatment of interest, the race of the respondent, was operationalized by the use of one black-sounding name, Jamal Jones, and one white-sounding name, Greg Baker. Our secondary treatment, social status, was administered via a profession mentioned in the email sent to the landlords.  We used a binary outcome variable set to 1 in the event of a response to our automated inquiry and 0 for no response.
                             </p>
 
-                            <p>
-                                In order to determine the appropriate sample size for our experiment, we implemented a power calculation based on data obtained in our pilot study. We set the average treatment effect (ATE) at a minimum of 5% in our actual experiment. Using the observed response rate in our control group (60% for white-sounding name), we used the formula for a Z-test for difference in proportions to determine that 749 subjects were needed to detect our desired minimum ATE.
+                            <p>Craigslist advertisements were scraped using the Python library Scrapy, data was de-duped using Splunk, automated emails were generated against a randomized sample from each city, and results were aggregated with another Python script. The statistical analysis was conducted in R. A sample email is shown below.
                             </p>
 
-                            <p>
-                                Four email addresses were created for each city. Each email responded to 40 listings. The email addresses were of the following general format, where “XXXX’ were some numerical characters to distinguish between them. In addition, each account name was set to either “Greg Baker” or “Jamal Jones”, depending on the race assignment of the account. This method reinforced our treatment as landlords presumably saw the respondents name next to the subject line in their inbox.
+                            <blockquote>
+                                I'm writing to inquire about your ad on Craigslist. I recently finished [graduate school/school] and took a job as [high job/low job] and I am looking for a place to live.
 
+                                If the apartment is still available, I would like to schedule a showing for next week.
+
+                                Thanks, [Greg Baker/Jamal Jones]
+                            </blockquote>
+
+                            <div class="text-center" alt="">
+                                <img src="img/portfolio/housing_setup.png" class="img-responsive center-block" alt="">
+                            </div>
+
+                            <p>
+                                In our experiment, we did not find racial discrimination across the five housing markets, although the New York market did show discrimination with statistical significance. Additionally, we found some differences across social status when we controlled for rental price. This result indicates that landlords may base their decision to respond more on the social status of the applicant than on their race.
+                            </p>
+
+                            <div class="text-center" alt="">
+                                <img src="img/portfolio/housing_table.png" class="img-responsive center-block" alt="">
+                            </div>
+
+                            <div class="text-center" alt="">
+                                <img src="img/portfolio/housing_response.png" class="img-responsive center-block" alt="">
+                            </div>
 
                             <ul class="list-inline item-details">
-                                <li>Link:
-                                    <strong><a href="#">UPDATE</a>
-                                    </strong>
-                                </li>
                                 <li>Tools:
-                                    <strong>R, Python
+                                    <strong>R, Python, Splunk
                                     </strong>
                                 </li>
                             </ul>
@@ -529,6 +544,7 @@
                             <h3>Various Tutorials on Different Algorithms</h3>
                             <hr class="star-primary">
                             <h4>Coming Soon</h4>
+                            <p>https://github.com/nathanieljblack/KNN</p>
                             <br>
 
 
